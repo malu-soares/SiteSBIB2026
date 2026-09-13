@@ -1,7 +1,7 @@
 import { ArrowRight, CalendarDays, MapPin } from 'lucide-react';
 import Countdown from './Countdown';
 
-const registrationUrl = 'https://www.sympla.com.br/evento-online/xxiv-semana-brasileira-de-informatica-biomedica/3093188';
+const registrationUrl = 'https://www.sympla.com.br/evento/xxiv-semana-brasileira-de-informatica-biomedica-usp/3569138';
 
 const Hero = () => {
   return (
@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="technical-rule" />
           </div>
 
-          <p className="section-kicker mb-4">USP - UFCSPA - UFPR</p>
+          <p className="section-kicker mb-4">USP - UFPR</p>
           <h1 className="max-w-4xl text-[clamp(2.65rem,7vw,6.8rem)]">
             24ª Semana Brasileira de Informática Biomédica
           </h1>
@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="mt-7 grid gap-3 text-base font-semibold text-[var(--sbib-forest)] sm:grid-cols-2">
             <div className="flex items-center gap-3">
               <CalendarDays size={22} />
-              <span>21 a 25 de setembro de 2026</span>
+              <span>USP: 21 a 25 de setembro de 2026 - UFPR: 14 a 18 de setembro de 2026</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin size={22} />

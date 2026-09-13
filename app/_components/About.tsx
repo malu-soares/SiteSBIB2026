@@ -42,10 +42,10 @@ const About = () => {
                 A Semana Brasileira de Informática Biomédica é um evento tradicional promovido pela Universidade de São Paulo desde 2002. Seu objetivo é integrar estudantes, professores, pesquisadores, empresas e instituições.
               </p>
               <p>
-                A partir da 18ª edição, a SBIB passou a contar com a parceria da USP, UFCSPA e UFPR, fortalecendo a integração entre universidades que ofertam o curso de Informática Biomédica.
+                Historicamente marcando a integração das instituições que ofertam o curso, a edição deste ano reforça a parceria entre a USP e a UFPR.
               </p>
               <p>
-                Em 2026, a 24ª edição acontece de 21 a 25 de setembro, em formato híbrido, com programação online e atividades presenciais alternadas entre as universidades.
+                Em 2026, a 24ª edição acontece em um formato integrado especial: a UFPR realiza sua programação de 14 a 18 de setembro, enquanto a USP sedia suas atividades de 21 a 25 de setembro.
               </p>
             </div>
           </div>

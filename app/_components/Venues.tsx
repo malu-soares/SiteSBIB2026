@@ -9,13 +9,7 @@ const venuesData = [
     logoSrc: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Webysther_20160310_-_Logo_USP.svg',
     mapLink: 'https://www.google.com/maps/place/Bloco+Did%C3%A1tico+-+FMRP+-+Subsetor+Oeste+-+11+(N-11),+Ribeir%C3%A3o+Preto+-+SP/',
   },
-  {
-    university: 'UFCSPA',
-    city: 'Porto Alegre - RS',
-    location: 'Prédio 1 - UFCSPA',
-    logoSrc: 'https://simposioensinonasaude.ufcspa.edu.br/apoio/logo-ufcspa.png',
-    mapLink: 'https://www.google.com/maps/place/R.+Sarmento+Leite,+245+-+Centro+Hist%C3%B3rico,+Porto+Alegre+-+RS/',
-  },
+  
   {
     university: 'UFPR',
     city: 'Curitiba - PR',
@@ -35,11 +29,12 @@ const Venues = () => {
             <h2 className="text-4xl sm:text-5xl">Sedes presenciais</h2>
           </div>
           <p className="max-w-xl">
-            A programação presencial será alternada entre USP, UFCSPA e UFPR ao longo da semana, mantendo a integração nacional do curso.
+            Cada universidade terá sua própria programação presencial, com palestras, minicursos e entre outras atividades. A transmissão online da grade principal será realizada pelo canal da Semana Brasileira de Informática Biomédica. Para mais informações sobre a programação de cada universidade, consulte a comissão organizadora da respectiva universidade.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        {/* Alterado apenas aqui para md:grid-cols-2 */}
+        <div className="grid gap-6 md:grid-cols-2">
           {venuesData.map((venue) => (
             <article key={venue.university} className="technical-card bg-[var(--sbib-mist)] p-6">
               <div className="mb-6 flex h-28 items-center justify-center border-2 border-black bg-[var(--sbib-cream)] p-5">

@@ -2,11 +2,6 @@ import { Handshake, Plus } from 'lucide-react';
 import Image from 'next/image';
 
 const sponsors = [
-  { name: 'Alura', src: '/logos/alura-dark.svg', href: 'https://www.alura.com.br/' },
-  { name: 'Infobio Jr.', src: '/logos/logo infobio preta maior.png', href: 'https://infobiojr.com.br/' },
-  { name: 'Ilegra', src: '/logos/Logo ilegra 2024_horizontal-laranja.png', href: 'https://www.ilegra.com/pt' },
-  { name: 'Beri Biotech', src: '/logos/logo-beri.png', href: 'https://beribiotech.com.br/' },
-  { name: 'BioCodeJr', src: '/logos/logo-biocodejr.svg', href: 'https://biocodejr.com.br/' },
   { name: 'USPapel', src: '/logos/uspapel-canva.png', href: 'https://www.uspapelartigos.com/' },
 ];
 

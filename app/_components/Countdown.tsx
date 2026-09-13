@@ -37,11 +37,15 @@ const calculateTimeLeft = (): TimeLeft => {
 };
 
 const TimeCard = ({ value, label }: { value: number; label: string }) => (
-  <div className="min-w-0 border-2 border-black bg-[var(--sbib-cream)] p-3 text-center shadow-[5px_5px_0_rgba(67,94,78,0.25)]">
-    <span className="block font-display text-3xl font-black text-black sm:text-4xl">
+  // Alterado: px-1 py-2 para garantir margem horizontal menor e flex para alinhar perfeitamente
+  <div className="flex min-w-0 flex-col items-center justify-center border-2 border-black bg-[var(--sbib-cream)] px-1 py-2 sm:p-2 text-center shadow-[4px_4px_0_rgba(67,94,78,0.25)]">
+    <span className="block font-display text-2xl font-black text-black sm:text-3xl xl:text-4xl">
       {String(value).padStart(2, '0')}
     </span>
-    <span className="mt-1 block text-[0.68rem] font-black uppercase text-[var(--sbib-forest)]">{label}</span>
+    {/* Alterado: font size reduzido para text-[9px] em mobile, com tracking-tighter para encolher a largura da palavra */}
+    <span className="mt-1 block text-[9px] sm:text-[10px] xl:text-[11px] font-black uppercase tracking-tighter text-[var(--sbib-forest)]">
+      {label}
+    </span>
   </div>
 );
 
@@ -77,7 +81,7 @@ const Countdown = () => {
       <div className="flex items-center gap-3 text-black">
         <PartyPopper size={30} />
         <div>
-          <h3 className="text-2xl">Evento encerrado</h3>
+          <h3 className="text-2xl font-bold uppercase">Evento encerrado</h3>
           <p className="text-sm">Obrigado por participar da 24ª SBIB.</p>
         </div>
       </div>
@@ -87,14 +91,15 @@ const Countdown = () => {
   if (eventStatus === 'live') {
     return (
       <div>
-        <h3 className="text-3xl text-[var(--sbib-green)]">O evento começou</h3>
+        <h3 className="text-3xl font-bold uppercase text-[var(--sbib-green)]">O evento começou</h3>
         <p className="mt-2 text-sm">Acompanhe a programação oficial e as transmissões ao vivo.</p>
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+    // Reduzido o gap de 3 para 2 em dispositivos móveis para ceder mais espaço aos cards
+    <div className="grid grid-cols-4 gap-1.5 sm:gap-2 md:gap-3">
       {Object.entries(timeLeft).map(([label, value]) => (
         <TimeCard key={label} value={value} label={label} />
       ))}

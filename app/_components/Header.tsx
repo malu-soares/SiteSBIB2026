@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const registrationUrl = 'https://www.sympla.com.br/evento-online/xxiv-semana-brasileira-de-informatica-biomedica/3093188';
+const registrationUrl = 'https://www.sympla.com.br/evento/xxiv-semana-brasileira-de-informatica-biomedica-usp/3569138';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -27,7 +27,7 @@ const Header = () => {
           <span className="hidden font-display text-sm font-black uppercase leading-tight text-black sm:block">
             2026
             <br />
-            USP - UFCSPA - UFPR
+            USP - UFPR
           </span>
         </Link>
 

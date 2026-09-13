@@ -6,16 +6,6 @@ const streams = [
     status: 'Em breve',
     description: 'As transmissões da programação online serão publicadas no canal da Semana Brasileira de Informática Biomédica.',
   },
-  {
-    title: 'Palestras 2026',
-    status: 'Em breve',
-    description: 'Links de palestras, mesas redondas e minicursos serão liberados conforme a programação oficial.',
-  },
-  {
-    title: 'Atividades presenciais',
-    status: 'Híbrido',
-    description: 'Acompanhe os comunicados das sedes USP, UFCSPA e UFPR para atividades locais e cobertura do evento.',
-  },
 ];
 
 const StreamingsPage = () => {
@@ -31,41 +21,49 @@ const StreamingsPage = () => {
         </div>
       </section>
 
-      <section className="container">
-        <div className="grid gap-6 md:grid-cols-3">
+      <section className="container py-16">
+        {/* Card principal ocupando largura total */}
+        <div className="w-full">
           {streams.map((stream) => (
-            <article key={stream.title} className="technical-card bg-[var(--sbib-mist)] p-6">
-              <div className="mb-5 flex items-center justify-between gap-4">
-                <MonitorPlay className="h-9 w-9 text-black" />
-                <span className="border-2 border-black bg-[var(--sbib-sand)] px-3 py-1 text-xs font-black uppercase text-black">
+            <article key={stream.title} className="technical-card bg-[var(--sbib-mist)] p-6 md:p-10 border-2 border-black">
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <MonitorPlay className="h-10 w-10 text-black" />
+                <span className="border-2 border-black bg-[var(--sbib-sand)] px-4 py-1.5 text-xs font-black uppercase text-black">
                   {stream.status}
                 </span>
               </div>
-              <h2 className="mb-4 text-2xl">{stream.title}</h2>
-              <p>{stream.description}</p>
-              <a
-                href="https://www.youtube.com/@SemanaBrasileiradeInformaticaBiomedica"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sbib-button mt-6 w-full px-4 py-3 text-sm"
-              >
-                <Youtube size={18} />
-                Abrir canal
-              </a>
+              
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div className="max-w-3xl">
+                  <h2 className="mb-4 text-3xl font-bold uppercase">{stream.title}</h2>
+                  <p className="text-lg text-black/80">{stream.description}</p>
+                </div>
+                
+                <a
+                  href="https://www.youtube.com/@sbib.informaticabiomedica/featured"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 border-2 border-black bg-black text-[var(--sbib-cream)] hover:bg-[var(--sbib-sand)] hover:text-black transition-colors px-8 py-4 font-display font-black uppercase shrink-0"
+                >
+                  <Youtube size={24} />
+                  Abrir canal
+                </a>
+              </div>
             </article>
           ))}
         </div>
 
+        {/* Caixas de informações alinhadas abaixo */}
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {[
             { icon: CalendarDays, title: 'Horários', text: 'Consulte o cronograma oficial assim que a organização divulgar a grade completa.' },
             { icon: Smartphone, title: 'Dispositivos', text: 'Assista pelo computador, tablet ou celular conectado à internet.' },
             { icon: MessageSquare, title: 'Interação', text: 'Use o chat da transmissão para perguntas e comentários quando disponível.' },
           ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="border-2 border-black bg-[var(--sbib-cream)] p-6">
+            <div key={title} className="border-2 border-black bg-[var(--sbib-cream)] p-6 hover:-translate-y-1 transition-transform">
               <Icon className="mb-4 h-9 w-9 text-[var(--sbib-green)]" />
-              <h3 className="mb-3 text-xl">{title}</h3>
-              <p className="text-sm">{text}</p>
+              <h3 className="mb-3 text-xl font-bold uppercase">{title}</h3>
+              <p className="text-sm text-black/80">{text}</p>
             </div>
           ))}
         </div>

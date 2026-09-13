@@ -8,14 +8,14 @@ const Footer = () => {
         <div className="footer-about">
           <span className="brand-logo">SBIB</span>
           <h3 className="footer-title">Semana Brasileira de Informática Biomédica</h3>
-          <p className="footer-description">24ª SBIB | 21 a 25 de setembro de 2026 | USP - UFCSPA - UFPR</p>
+          <p className="footer-description">24ª SBIB | 21 a 25 de setembro de 2026 | USP - UFPR</p>
         </div>
 
         <div className="footer-social">
           <a href="https://www.instagram.com/semanadaibm/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://www.youtube.com/@SemanaBrasileiradeInformaticaBiomedica" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@sbib.informaticabiomedica" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
             <FaYoutube />
           </a>
           <a href="https://www.linkedin.com/company/semanadaibm/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
