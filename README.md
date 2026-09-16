@@ -40,7 +40,7 @@ A identidade visual da 24ª edição reflete o dinamismo e a conexão multidisci
 - Node.js 20+ instalado
 - npm, yarn ou pnpm
 
-### Instalação
+### Instalação 
 
 1. **Clone o repositório:**
    ```bash
